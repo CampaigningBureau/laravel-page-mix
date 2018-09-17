@@ -7,7 +7,7 @@ Javascript named after the current route.
 
 Add the service provider to the `config/app.php` provider array
 ```php
-MScharl\LaravelPageMix\Provider\LaravelPageMixProvider::class,
+CampaigningBureau\LaravelPageMix\Provider\LaravelPageMixProvider::class,
 ```
 
 Use `pageMix()` instead of `mix('page.js')`
@@ -19,7 +19,7 @@ Use `pageMix()` instead of `mix('page.js')`
 
 Publish the config file by executing the following command:
 ```bash
-php artisan vendor:publish --provider=MScharl\\LaravelPageMix\\Provider\\LaravelPageMixProvider
+php artisan vendor:publish --provider=CampaigningBureau\\LaravelPageMix\\Provider\\LaravelPageMixProvider
 ```
 
 It allows to configure a default file path if the route does not match any file name
