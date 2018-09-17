@@ -34,6 +34,7 @@ class LaravelPageMixProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../../config/page-mix.php', 'page-mix');
     }
 
+
     public function provides()
     {
         return [
