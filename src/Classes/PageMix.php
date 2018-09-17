@@ -63,13 +63,16 @@ class PageMix
 
             $this->files = collect($mix_data)
                 ->flip()
-                ->filter(function ($file_path) {
+                ->filter(function ($file_path)
+                {
                     return !$this->ignored_files->contains($file_path);
                 })
-                ->filter(function ($file_path) {
+                ->filter(function ($file_path)
+                {
                     return substr($file_path, -3) === '.js';
                 })
-                ->mapWithKeys(function ($file_path) {
+                ->mapWithKeys(function ($file_path)
+                {
                     return [
                         basename($file_path, '.js') => $file_path,
                     ];

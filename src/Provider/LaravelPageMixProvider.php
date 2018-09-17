@@ -2,8 +2,8 @@
 
 namespace CampaigningBureau\LaravelPageMix\Provider;
 
+use CampaigningBureau\LaravelPageMix\Classes\PageMix;
 use Illuminate\Support\ServiceProvider;
-use MScharl\LaravelPageMix\Classes\PageMix;
 
 class LaravelPageMixProvider extends ServiceProvider
 {
@@ -18,7 +18,8 @@ class LaravelPageMixProvider extends ServiceProvider
             __DIR__ . '/../../config/page-mix.php' => config_path('page-mix.php'),
         ], 'config');
 
-        $this->app->singleton('page-mix', function() {
+        $this->app->singleton('page-mix', function ()
+        {
             return new PageMix($this->app->make('files'));
         });
     }
@@ -36,7 +37,7 @@ class LaravelPageMixProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'page-mix'
+            'page-mix',
         ];
     }
 }
